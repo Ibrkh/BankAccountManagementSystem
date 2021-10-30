@@ -160,6 +160,7 @@ public class JUnitTesting
 
 		System.out.println("Welcome to Islamic Zakaat Interface\n");
 
+		@SuppressWarnings("unused")
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter Account Number: ");
 
