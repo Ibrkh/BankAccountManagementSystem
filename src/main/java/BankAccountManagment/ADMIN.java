@@ -1,5 +1,14 @@
 package BankAccountManagment;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class ADMIN
 {
 	// Attributes
@@ -7,6 +16,9 @@ public class ADMIN
 	String LastName;
 	String AdminID;
 	String IDPassword;
+	
+	//Customer ArrayList
+	ArrayList<Customer> Customers = new ArrayList<Customer>();
 	
 	public ADMIN()
 	{

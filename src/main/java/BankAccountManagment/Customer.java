@@ -1,5 +1,7 @@
 package BankAccountManagment;
 
+import java.util.ArrayList;
+
 class Customer
 {	
 	// Attributes
@@ -11,6 +13,9 @@ class Customer
 	String Address;
 	String Email;
 	String PhoneNumber;
+	
+	// BankAccount ArrayList
+	ArrayList<BankAccount> Accounts = new ArrayList<BankAccount>();
 	
 	// Default Constructor
 	public Customer()
@@ -48,5 +53,18 @@ class Customer
 		this.PhoneNumber = PhoneNumber;
 		this.Gender = Gender;
 		this.Age = Age;			
+	}
+	
+	public void CustomerDetails()
+	{
+		System.out.println("Customer Name: " + FirstName + " " + LastName);
+		System.out.println("Customer Age/Gender: " + Age + "/" + Gender);
+		System.out.println("Customer Addres: " + Address);
+		System.out.println("Customer Phone Number: " + PhoneNumber);
+		System.out.println("Customer Email: " + Email);
+		
+		for(int i=0; i<Accounts.size(); i++)
+			Accounts.get(i).AccountDetails();		
+
 	}
 }
